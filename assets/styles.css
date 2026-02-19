@@ -186,6 +186,15 @@ h1 {
   line-height: 1.65;
 }
 
+.lead a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.lead a:hover {
+  text-decoration: underline;
+}
+
 .hero-actions {
   display: flex;
   gap: 1rem;
@@ -540,9 +549,15 @@ h1 {
   color: var(--muted);
 }
 
-.contact a {
+.contact a,
+.card a {
   color: var(--accent);
   text-decoration: none;
+}
+
+.contact a:hover,
+.card a:hover {
+  text-decoration: underline;
 }
 
 .site-footer {
