@@ -635,6 +635,10 @@ h1 {
   text-decoration: underline;
 }
 
+.profile-link {
+  text-decoration: underline;
+}
+
 .site-footer {
   border-top: 1px solid var(--border);
   margin-top: 2rem;
