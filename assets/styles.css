@@ -161,6 +161,38 @@ html.dark .theme-toggle::before {
   margin: 0.25rem 0 0.75rem;
 }
 
+.hero-profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.hero-profile-links a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.hero-profile-links a:hover {
+  text-decoration: underline;
+}
+
+.hero-profile-links span[aria-hidden="true"] {
+  color: var(--muted);
+  user-select: none;
+}
+
+.hero-profile-links img {
+  vertical-align: middle;
+}
+
+.hero-profile-links em {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
@@ -417,6 +449,24 @@ h1 {
 .project-card p {
   margin: 0;
   font-size: 0.95rem;
+}
+
+.project-impact p {
+  margin-bottom: 0.75rem;
+}
+
+.project-impact p:last-of-type {
+  margin-bottom: 0;
+}
+
+.project-tech {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.profile-list li {
+  margin-bottom: 0.35rem;
 }
 
 /* Expertise grid */
