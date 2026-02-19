@@ -184,8 +184,21 @@ html.dark .theme-toggle::before {
   user-select: none;
 }
 
-.hero-profile-links img {
+.hero-profile-links img,
+.hero-profile-links .icon-wos {
   vertical-align: middle;
+}
+
+.icon-wos {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-inline-start: 0.25em;
+  vertical-align: middle;
+}
+
+.profile-link .icon-wos {
+  margin-inline-start: 0.25em;
 }
 
 .hero-profile-links em {
