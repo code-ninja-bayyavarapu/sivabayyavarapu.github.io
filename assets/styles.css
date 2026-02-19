@@ -500,6 +500,81 @@ h1 {
   font-size: 0.95rem;
 }
 
+/* Blog index & post pages */
+.page-content {
+  padding: 2rem 0 3rem;
+}
+
+.blog-page .section-intro {
+  margin-bottom: 1.5rem;
+}
+
+.blog-index-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.blog-index-item {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.blog-index-item:last-child {
+  border-bottom: none;
+}
+
+.blog-index-item .blog-date {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+
+.blog-index-item h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.25rem;
+}
+
+.blog-index-item h2 a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.blog-index-item h2 a:hover {
+  color: var(--accent);
+}
+
+.blog-index-item p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.blog-back {
+  margin: 0 0 0.75rem !important;
+  font-size: 0.9rem;
+}
+
+.blog-post .blog-date {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.blog-post h1 {
+  margin: 0 0 1rem;
+  font-size: 1.75rem;
+}
+
+.blog-post p {
+  margin: 0 0 1rem;
+}
+
+.blog-post p:last-child {
+  margin-bottom: 0;
+}
+
 /* Blog */
 .blog-list {
   display: flex;
