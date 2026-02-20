@@ -537,6 +537,10 @@ h1 {
   line-height: 1.7;
 }
 
+.recognition-grid ul li::marker {
+  color: var(--muted);
+}
+
 #recognition h3 {
   margin: 1.25rem 0 0.5rem;
   font-size: 1.05rem;
