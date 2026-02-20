@@ -171,6 +171,11 @@ html.dark .theme-toggle::before {
   margin-bottom: 1rem;
 }
 
+.hero-profile-links.hero-icon-row {
+  gap: 0.75rem 1rem;
+  margin-top: 0.5rem;
+}
+
 .hero-profile-links a {
   color: var(--accent);
   text-decoration: none;
@@ -180,14 +185,35 @@ html.dark .theme-toggle::before {
   text-decoration: underline;
 }
 
+.hero-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+}
+
+.hero-icon-link:hover {
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.hero-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
 .hero-profile-links span[aria-hidden="true"] {
   color: var(--muted);
   user-select: none;
 }
 
 .hero-profile-links img,
-.hero-profile-links .icon-wos {
+.hero-profile-links .icon-wos,
+.hero-profile-links .icon-github {
   vertical-align: middle;
+  margin-inline-end: 0.25em;
 }
 
 .icon-wos {
@@ -493,6 +519,21 @@ h1 {
   margin-top: 0.5rem;
   font-size: 0.9rem;
   color: var(--muted);
+}
+
+.profile-group-title {
+  margin: 1rem 0 0.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+#recognition .profile-group-title:first-of-type {
+  margin-top: 0.5rem;
+}
+
+.profile-list {
+  margin: 0 0 0.5rem;
 }
 
 .profile-list li {
