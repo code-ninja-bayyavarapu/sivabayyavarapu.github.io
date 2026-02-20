@@ -4,34 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Designing Enterprise-Grade SaaS Integrations: Scalable Contract Lifecycle Automation — Siva Bayyavarapu." />
-    <title>Enterprise SaaS Integrations | Blog | Siva Bayyavarapu</title>
+    <title>Enterprise SaaS Integrations | Technical Insights | Siva Bayyavarapu</title>
     <link rel="stylesheet" href="../assets/styles.css" />
   </head>
   <body>
-    <header class="topbar">
-      <div class="wrap topbar-inner">
-        <a class="brand" href="../index.html">Siva Bayyavarapu</a>
-        <nav class="main-nav" aria-label="Primary navigation">
-          <a href="../index.html#about">About</a>
-          <a href="../index.html#experience">Experience</a>
-          <a href="../index.html#expertise">Expertise</a>
-          <a href="../index.html#projects">Projects</a>
-          <a href="../index.html#publications">Research</a>
-          <a href="../index.html#recognition">Recognition</a>
-          <a href="../index.html#speaking">Speaking</a>
-          <a href="index.html">Blog</a>
-          <a href="../index.html#contact">Contact</a>
-        </nav>
-        <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light theme"></button>
-        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </header>
+    <header class="topbar" id="site-header"></header>
 
     <main class="wrap page-content">
       <article class="card blog-post">
-        <p class="blog-back"><a href="index.html">← Back to Blog</a></p>
+        <p class="blog-back"><a href="index.html">← Back to Technical Insights</a></p>
         <p class="blog-date">2026</p>
         <h1>Designing Enterprise-Grade SaaS Integrations: Scalable Contract Lifecycle Automation</h1>
         <p class="blog-subtitle">Architectural patterns for building secure, scalable, and maintainable integrations across enterprise platforms.</p>
@@ -118,13 +99,15 @@
         <p>Then iterate toward richer orchestration and self-service diagnostics.</p>
 
         <h2>References</h2>
-        <p><strong>IEEE Paper (placeholder):</strong></p>
+        <!-- IEEE citation: update with final conference/journal name and DOI when published -->
+        <p><strong>IEEE Paper:</strong></p>
         <p>S. Bayyavarapu, &ldquo;Enterprise Integration Patterns for Cross-Platform Contract Lifecycle Automation,&rdquo; IEEE [Conference/Journal Name], 2026. DOI: [TBD]</p>
-        <p>Link placeholder: <a href="https://doi.org/TBD" target="_blank" rel="noopener">https://doi.org/TBD</a></p>
-        <p><strong>GitHub Repo (placeholder):</strong></p>
-        <p>Reference architecture / sample integration patterns (TBD): <a href="https://github.com/code-ninja-bayyavarapu/TBD-enterprise-saas-integrations" target="_blank" rel="noopener">https://github.com/code-ninja-bayyavarapu/TBD-enterprise-saas-integrations</a></p>
+        <p><a href="https://doi.org/TBD" target="_blank" rel="noopener">https://doi.org/TBD</a></p>
+        <!-- GitHub repo: replace with actual repo URL when available -->
+        <p><strong>GitHub Repo:</strong></p>
+        <p>Reference architecture / sample integration patterns: <a href="https://github.com/code-ninja-bayyavarapu/TBD-enterprise-saas-integrations" target="_blank" rel="noopener">https://github.com/code-ninja-bayyavarapu/TBD-enterprise-saas-integrations</a></p>
 
-        <p class="blog-back"><a href="index.html">← Back to Blog</a></p>
+        <p class="blog-back"><a href="index.html">← Back to Technical Insights</a></p>
       </article>
     </main>
 
@@ -135,34 +118,6 @@
       </div>
     </footer>
 
-    <script>
-      (function () {
-        var nav = document.querySelector('.main-nav');
-        var toggle = document.querySelector('.nav-toggle');
-        if (toggle && nav) {
-          toggle.addEventListener('click', function () {
-            var open = nav.classList.toggle('open');
-            toggle.setAttribute('aria-expanded', open);
-          });
-          nav.querySelectorAll('a').forEach(function (a) {
-            a.addEventListener('click', function () {
-              nav.classList.remove('open');
-              toggle.setAttribute('aria-expanded', 'false');
-            });
-          });
-        }
-        var themeBtn = document.querySelector('.theme-toggle');
-        if (themeBtn) {
-          var dark = localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
-          document.documentElement.classList.toggle('dark', dark);
-          themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
-          themeBtn.addEventListener('click', function () {
-            dark = !document.documentElement.classList.toggle('dark');
-            localStorage.setItem('theme', dark ? 'dark' : 'light');
-            themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
-          });
-        }
-      })();
-    </script>
+    <script src="../assets/site.js"></script>
   </body>
 </html>

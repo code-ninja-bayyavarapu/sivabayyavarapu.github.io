@@ -70,26 +70,7 @@
     </script>
   </head>
   <body>
-    <header class="topbar">
-      <div class="wrap topbar-inner">
-        <a class="brand" href="#home">Siva Bayyavarapu</a>
-        <nav class="main-nav" aria-label="Primary navigation">
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#expertise">Expertise</a>
-          <a href="#projects">Projects</a>
-          <a href="#publications">Research</a>
-          <a href="#recognition">Recognition</a>
-          <a href="#speaking">Speaking</a>
-          <a href="blog/index.html">Blog</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light theme"></button>
-        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </header>
+    <header class="topbar" id="site-header"></header>
 
     <section class="hero" id="home">
       <div class="wrap hero-grid">
@@ -334,11 +315,11 @@
       </section>
 
       <section id="blog" class="card">
-        <h2>Blog</h2>
+        <h2>Technical Insights</h2>
         <p class="section-intro">Selected writings on distributed systems, enterprise integration, and API modernization.</p>
         <p><a href="blog/event-correlated-agent-framework.html">From Alerts to Autonomy: Architecting Event-Correlated Agent Frameworks for Self-Healing Enterprises</a></p>
         <p><a href="blog/enterprise-saas-integrations.html">Designing Enterprise-Grade SaaS Integrations</a></p>
-        <p><a class="btn" href="blog/index.html">View All Articles</a></p>
+        <p><a class="btn" href="blog/index.html">View all</a></p>
       </section>
 
       <section id="contact" class="card contact contact-cta">
@@ -357,34 +338,6 @@
       </div>
     </footer>
 
-    <script>
-      (function () {
-        var nav = document.querySelector('.main-nav');
-        var toggle = document.querySelector('.nav-toggle');
-        if (toggle && nav) {
-          toggle.addEventListener('click', function () {
-            var open = nav.classList.toggle('open');
-            toggle.setAttribute('aria-expanded', open);
-          });
-          nav.querySelectorAll('a').forEach(function (a) {
-            a.addEventListener('click', function () {
-              nav.classList.remove('open');
-              toggle.setAttribute('aria-expanded', 'false');
-            });
-          });
-        }
-        var themeBtn = document.querySelector('.theme-toggle');
-        if (themeBtn) {
-          var dark = localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
-          document.documentElement.classList.toggle('dark', dark);
-          themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
-          themeBtn.addEventListener('click', function () {
-            dark = !document.documentElement.classList.toggle('dark');
-            localStorage.setItem('theme', dark ? 'dark' : 'light');
-            themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
-          });
-        }
-      })();
-    </script>
+    <script src="assets/site.js"></script>
   </body>
 </html>
