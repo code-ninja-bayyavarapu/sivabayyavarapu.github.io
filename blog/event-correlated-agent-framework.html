@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="From Alerts to Autonomy: Architecting Event-Correlated Agent Frameworks for Self-Healing Enterprises — Siva Bayyavarapu." />
+    <title>Event-Correlated Agent Framework | Blog | Siva Bayyavarapu</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap topbar-inner">
+        <a class="brand" href="../index.html">Siva Bayyavarapu</a>
+        <nav class="main-nav" aria-label="Primary navigation">
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#expertise">Expertise</a>
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#publications">Research</a>
+          <a href="../index.html#recognition">Recognition</a>
+          <a href="../index.html#speaking">Speaking</a>
+          <a href="index.html">Blog</a>
+          <a href="../index.html#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light theme"></button>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="wrap page-content">
+      <article class="card blog-post">
+        <p class="blog-back"><a href="index.html">← Back to Blog</a></p>
+        <p class="blog-date">February 2026</p>
+        <h1>From Alerts to Autonomy: Architecting Event-Correlated Agent Frameworks for Self-Healing Enterprises</h1>
+        <p class="blog-subtitle">Designing event-correlated agent architectures that transform reactive alerting into autonomous remediation workflows.</p>
+
+        <h2>Introduction</h2>
+        <p>Modern enterprise platforms generate massive volumes of telemetry, logs, and alerts. Yet most organizations still operate reactively—teams respond to isolated signals rather than understanding correlated system behavior.</p>
+        <p>This article outlines an event-correlated agent architecture that turns fragmented monitoring signals into a structured incident narrative and enables safe, semi-autonomous remediation.</p>
+
+        <h2>The Problem: Alert Fatigue in Distributed Systems</h2>
+        <p>In large-scale SaaS environments, incidents rarely originate from a single component. Instead, symptoms cascade across services and teams. Common pain points include:</p>
+        <ul>
+          <li>Too many alerts with low signal-to-noise</li>
+          <li>Logs and traces scattered across tools and tenants</li>
+          <li>Manual triage and repeated &ldquo;war-room&rdquo; diagnostics</li>
+          <li>Slow root-cause identification and inconsistent remediation playbooks</li>
+        </ul>
+        <p>The result is increased MTTR and operational strain, especially as systems scale.</p>
+
+        <h2>A Practical Architecture for Event-Correlated Agents</h2>
+        <p>A self-healing enterprise does not &ldquo;skip humans&rdquo;; it reduces unnecessary human toil while keeping control and accountability. A practical event-correlated agent architecture has three layers:</p>
+        <ul>
+          <li><strong>Event Aggregation Layer:</strong> Ingests logs, metrics, traces, and alerts; normalizes schemas and timestamps; attaches consistent context identifiers where possible.</li>
+          <li><strong>Correlation Engine:</strong> Groups related signals into an incident storyline using rules, heuristics, and confidence scoring (e.g., shared identifiers, temporal proximity, dependency topology).</li>
+          <li><strong>Agent Execution Layer:</strong> Triggers remediation workflows with safety rails (approval gates, rate limits, idempotency, and rollback plans).</li>
+        </ul>
+
+        <h2>Correlation: Turning Signals into an Incident Narrative</h2>
+        <p>Correlation is the differentiator. Instead of &ldquo;N alerts,&rdquo; the system produces an explainable narrative:</p>
+        <ul>
+          <li>What changed first (candidate trigger)</li>
+          <li>Which dependencies were impacted</li>
+          <li>Which symptoms are downstream effects</li>
+          <li>What remediation actions are safe to attempt</li>
+        </ul>
+        <p>This narrative becomes the unit of work for both humans and automated agents.</p>
+
+        <h2>Safety Rails: How to Automate Without Breaking Production</h2>
+        <p>Autonomous actions must be safe by design. Recommended safeguards include:</p>
+        <ul>
+          <li><strong>Idempotent actions:</strong> repeatable without causing harm</li>
+          <li><strong>Blast-radius controls:</strong> target scoped resources only</li>
+          <li><strong>Progressive rollout:</strong> canary and phased execution</li>
+          <li><strong>Human-in-the-loop options:</strong> approvals for high-risk actions</li>
+          <li><strong>Auditability:</strong> every action logged with &ldquo;why&rdquo; and &ldquo;what&rdquo;</li>
+          <li><strong>Fallback playbooks:</strong> automatic rollback and escalation triggers</li>
+        </ul>
+
+        <h2>What This Enables</h2>
+        <p>With correlation + safe automation, organizations can:</p>
+        <ul>
+          <li>Reduce noisy alert storms into a few actionable incident threads</li>
+          <li>Shorten triage and diagnosis time</li>
+          <li>Standardize remediation playbooks across teams</li>
+          <li>Build a repeatable path toward self-healing operations</li>
+        </ul>
+
+        <h2>Next Steps (How to Start Small)</h2>
+        <p>Start with one bounded domain:</p>
+        <ul>
+          <li>Correlate alerts for a single workflow or service group</li>
+          <li>Implement 1–2 low-risk actions (restart, scale, queue drain)</li>
+          <li>Add audit logs and dashboards</li>
+          <li>Expand correlation features (topology-aware grouping, confidence scoring)</li>
+        </ul>
+        <p>Incremental wins build trust and adoption.</p>
+
+        <h2>References</h2>
+        <p><strong>IEEE Paper (placeholder):</strong></p>
+        <p>S. Bayyavarapu, &ldquo;Event-Correlated Agent Architectures for Self-Healing Enterprises,&rdquo; IEEE [Conference/Journal Name], 2026. DOI: [TBD]</p>
+        <p>Link placeholder: <a href="https://doi.org/TBD" target="_blank" rel="noopener">https://doi.org/TBD</a></p>
+        <p><strong>GitHub Repo (placeholder):</strong></p>
+        <p>Reference implementation / architecture notes (TBD): <a href="https://github.com/code-ninja-bayyavarapu/TBD-event-correlated-agent-framework" target="_blank" rel="noopener">https://github.com/code-ninja-bayyavarapu/TBD-event-correlated-agent-framework</a></p>
+
+        <p class="blog-back"><a href="index.html">← Back to Blog</a></p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>© 2026 Siva Bayyavarapu</p>
+        <p><a href="../index.html">Home</a> · <a href="index.html">Blog</a></p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var nav = document.querySelector('.main-nav');
+        var toggle = document.querySelector('.nav-toggle');
+        if (toggle && nav) {
+          toggle.addEventListener('click', function () {
+            var open = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', open);
+          });
+          nav.querySelectorAll('a').forEach(function (a) {
+            a.addEventListener('click', function () {
+              nav.classList.remove('open');
+              toggle.setAttribute('aria-expanded', 'false');
+            });
+          });
+        }
+        var themeBtn = document.querySelector('.theme-toggle');
+        if (themeBtn) {
+          var dark = localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          document.documentElement.classList.toggle('dark', dark);
+          themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+          themeBtn.addEventListener('click', function () {
+            dark = !document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', dark ? 'dark' : 'light');
+            themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

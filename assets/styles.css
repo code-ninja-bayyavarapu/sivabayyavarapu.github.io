@@ -620,14 +620,31 @@ h1 {
 
 .blog-post .blog-date {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--muted);
   margin-bottom: 0.5rem;
+}
+
+.blog-post .blog-subtitle {
+  margin: -0.5rem 0 1rem;
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.5;
 }
 
 .blog-post h1 {
   margin: 0 0 1rem;
   font-size: 1.75rem;
+}
+
+.blog-post h2 {
+  margin: 1.5rem 0 0.6rem;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.blog-post h2:first-of-type {
+  margin-top: 1rem;
 }
 
 .blog-post p {
@@ -636,6 +653,47 @@ h1 {
 
 .blog-post p:last-child {
   margin-bottom: 0;
+}
+
+.blog-post ul {
+  margin: 0 0 1rem;
+  padding-left: 1.5rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.blog-post ul li {
+  margin-bottom: 0.35rem;
+}
+
+.blog-post ul li:last-child {
+  margin-bottom: 0;
+}
+
+.blog-citation {
+  padding: 0.75rem 1rem;
+  background: var(--surface-soft);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.citation-placeholder {
+  font-style: italic;
+}
+
+.blog-index-item .blog-links {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+}
+
+.blog-index-item .blog-links a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.blog-index-item .blog-links a:hover {
+  text-decoration: underline;
 }
 
 /* Blog */
