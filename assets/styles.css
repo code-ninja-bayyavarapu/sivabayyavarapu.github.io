@@ -398,16 +398,32 @@ h1 {
 
 .timeline-meta {
   display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
   margin-bottom: 0.5rem;
 }
 
-.timeline-meta strong {
+.timeline-company-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: var(--surface-soft);
+}
+
+.timeline-meta-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.timeline-meta-text strong {
   color: var(--text);
 }
 
-.timeline-meta span {
+.timeline-meta-text span {
   font-size: 0.9rem;
   color: var(--muted);
 }
