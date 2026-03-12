@@ -339,10 +339,10 @@ h1 {
 }
 
 .hero-mentorship-title {
-  font-size: 0.95rem;
-  margin: 0 0 0.5rem;
-  color: var(--text);
+  font-size: 0.875rem;
   font-weight: 600;
+  margin: 0.75rem 0 0.5rem;
+  color: var(--text);
 }
 
 .hero-mentorship-text {
@@ -356,10 +356,17 @@ h1 {
   display: inline-block;
   font-size: 0.875rem;
   padding: 0.45rem 0.85rem;
+  transition: all 0.2s ease;
 }
 
 .hero-mentorship-btn:hover {
-  opacity: 0.92;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  opacity: 0.98;
+}
+
+html.dark .hero-mentorship-btn:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
 }
 
 .card {
@@ -854,6 +861,18 @@ h1 {
 .contact a:hover,
 .card a:hover {
   text-decoration: underline;
+}
+
+.leadership-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+.leadership-link:hover {
+  text-decoration: underline;
+  color: var(--accent);
 }
 
 .profile-link {
