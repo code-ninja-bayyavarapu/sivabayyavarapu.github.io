@@ -334,13 +334,13 @@ h1 {
 
 .hero-mentorship {
   margin-top: 1.5rem;
-  padding-top: 1.25rem;
+  padding-top: 1.5rem;
   border-top: 1px solid var(--border);
 }
 
 .hero-mentorship-title {
   font-size: 0.95rem;
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.5rem;
   color: var(--text);
   font-weight: 600;
 }
@@ -348,14 +348,14 @@ h1 {
 .hero-mentorship-text {
   font-size: 0.85rem;
   color: var(--muted);
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.85rem;
   line-height: 1.5;
 }
 
 .hero-mentorship-btn {
   display: inline-block;
   font-size: 0.875rem;
-  padding: 0.5rem 0.9rem;
+  padding: 0.45rem 0.85rem;
 }
 
 .hero-mentorship-btn:hover {
