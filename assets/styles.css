@@ -623,7 +623,185 @@ html.dark .hero-mentorship-btn:hover {
   line-height: 1.7;
 }
 
-/* Recognition */
+/* Recognition — refactored hierarchy */
+.recognition-subsection-title {
+  margin: 1.5rem 0 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+
+#recognition .recognition-subsection-title:first-of-type {
+  margin-top: 0.75rem;
+}
+
+.recognition-list {
+  margin: 0 0 0.5rem;
+  padding-left: 0;
+  list-style: none;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.recognition-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.4rem;
+}
+
+.recognition-list li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.recognition-list a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.recognition-list a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Speaking cards — only card-style block in recognition */
+.speaking-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.speaking-card {
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.speaking-card:hover,
+.speaking-card[open] {
+  box-shadow: var(--shadow);
+  border-color: var(--border);
+}
+
+.speaking-card[open] {
+  background: var(--surface);
+}
+
+.speaking-card-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  padding: 0.9rem 1rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  list-style: none;
+  color: var(--text);
+}
+
+.speaking-card-summary:focus {
+  outline: none;
+}
+
+.speaking-card-summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.speaking-card-summary::-webkit-details-marker {
+  display: none;
+}
+
+.speaking-card-summary::after {
+  content: "+";
+  margin-left: auto;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--muted);
+  transition: transform 0.2s ease;
+}
+
+.speaking-card[open] .speaking-card-summary::after {
+  content: "−";
+}
+
+.speaking-card-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.speaking-card-badge-keynote {
+  background: var(--accent);
+  color: #fff;
+}
+
+.speaking-card-badge-invited {
+  background: var(--surface);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.speaking-card-event {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.speaking-card-meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.speaking-card-details {
+  padding: 0 1rem 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.speaking-card-details p {
+  margin: 0.5rem 0;
+  line-height: 1.55;
+}
+
+.speaking-card-title {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.95rem;
+  margin-top: 0.75rem !important;
+}
+
+.speaking-card-meta-line {
+  font-size: 0.85rem !important;
+}
+
+.speaking-card-desc {
+  margin-top: 0.6rem !important;
+}
+
+.speaking-card-link {
+  color: var(--accent) !important;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.speaking-card-link:hover {
+  text-decoration: underline;
+}
+
+/* Legacy recognition grid (fallback if used elsewhere) */
 .recognition-grid ul {
   margin: 0 0 1rem;
   padding-left: 2.5rem;
@@ -644,7 +822,6 @@ html.dark .hero-mentorship-btn:hover {
   margin-top: 0;
 }
 
-/* Speaking */
 .speaking-list {
   margin: 0;
   padding-left: 1.2rem;
@@ -941,6 +1118,10 @@ html.dark .hero-mentorship-btn:hover {
 
   .profile-card {
     max-width: 320px;
+  }
+
+  .speaking-cards {
+    grid-template-columns: 1fr;
   }
 
   .footer-inner {
