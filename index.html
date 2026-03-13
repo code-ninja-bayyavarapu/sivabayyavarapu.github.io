@@ -288,6 +288,7 @@
         <h3 class="recognition-subsection-title">Honors &amp; Professional Recognition</h3>
         <ul class="recognition-list recognition-list-honors">
           <li><a href="https://scrs.in/scrs-fellow/1409" target="_blank" rel="noopener noreferrer">Distinguished Fellow — SCRS</a></li>
+          <li><a href="https://www.raptors.dev/our-members" target="_blank" rel="noopener noreferrer">Raptor Fellow — Raptors.dev</a></li>
           <li><a href="https://ieee-collabratec.ieee.org/app/p/SivaBayyavarapu1177978" target="_blank" rel="noopener noreferrer">Senior Member — IEEE</a></li>
           <li>Fellow — IETE</li>
           <li>Member — ACM</li>
@@ -295,14 +296,14 @@
         </ul>
 
         <h3 class="recognition-subsection-title">Speaking &amp; Invited Talks</h3>
-        <div class="speaking-cards" role="list">
-          <details class="speaking-card" role="listitem">
-            <summary class="speaking-card-summary">
+        <div class="speaking-cards" role="list" id="speaking-cards-container">
+          <details class="speaking-card" id="speaking-card-1" role="listitem">
+            <summary class="speaking-card-summary" aria-expanded="false" aria-controls="speaking-card-1-details">
               <span class="speaking-card-badge speaking-card-badge-keynote">Keynote</span>
               <span class="speaking-card-event">AICCoNS 2026</span>
               <span class="speaking-card-meta">2026</span>
             </summary>
-            <div class="speaking-card-details">
+            <div class="speaking-card-details" id="speaking-card-1-details">
               <p class="speaking-card-title">From Alerts to Autonomy: Architecting Event-Correlated Agent Frameworks for Self-Healing Enterprises</p>
               <p class="speaking-card-meta-line"><strong>Event:</strong> AICCoNS</p>
               <p class="speaking-card-meta-line"><strong>Year:</strong> 2026</p>
@@ -310,25 +311,25 @@
               <p><a href="https://aiccons.com/keynote_speakers/bayyavarapu-siva-rama-krishna-varma/" target="_blank" rel="noopener noreferrer" class="speaking-card-link">View speaker profile →</a></p>
             </div>
           </details>
-          <details class="speaking-card" role="listitem">
-            <summary class="speaking-card-summary">
+          <details class="speaking-card" id="speaking-card-2" role="listitem">
+            <summary class="speaking-card-summary" aria-expanded="false" aria-controls="speaking-card-2-details">
               <span class="speaking-card-badge speaking-card-badge-keynote">Keynote</span>
               <span class="speaking-card-event">EAMCON 2026</span>
               <span class="speaking-card-meta">2026</span>
             </summary>
-            <div class="speaking-card-details">
+            <div class="speaking-card-details" id="speaking-card-2-details">
               <p class="speaking-card-title">EAMCON 2026 Keynote</p>
               <p class="speaking-card-meta-line"><strong>Event:</strong> EAMCON</p>
               <p class="speaking-card-meta-line"><strong>Year:</strong> 2026</p>
             </div>
           </details>
-          <details class="speaking-card" role="listitem">
-            <summary class="speaking-card-summary">
+          <details class="speaking-card" id="speaking-card-3" role="listitem">
+            <summary class="speaking-card-summary" aria-expanded="false" aria-controls="speaking-card-3-details">
               <span class="speaking-card-badge speaking-card-badge-invited">Invited Talk</span>
               <span class="speaking-card-event">AIC 2026</span>
               <span class="speaking-card-meta">SCRS · 2026</span>
             </summary>
-            <div class="speaking-card-details">
+            <div class="speaking-card-details" id="speaking-card-3-details">
               <p class="speaking-card-title">Enterprise Integration in the AI Era: Building Intelligent and Self-Healing Digital Ecosystems</p>
               <p class="speaking-card-meta-line"><strong>Organizer:</strong> SCRS</p>
               <p class="speaking-card-meta-line"><strong>Year:</strong> 2026</p>
@@ -336,25 +337,25 @@
               <p><a href="https://www.scrs.in/public/conference/aic2026/speaker/talk/22725" target="_blank" rel="noopener noreferrer" class="speaking-card-link">View talk details →</a></p>
             </div>
           </details>
-          <details class="speaking-card" role="listitem">
-            <summary class="speaking-card-summary">
+          <details class="speaking-card" id="speaking-card-4" role="listitem">
+            <summary class="speaking-card-summary" aria-expanded="false" aria-controls="speaking-card-4-details">
               <span class="speaking-card-badge speaking-card-badge-keynote">Keynote</span>
               <span class="speaking-card-event">CISCOM 2026</span>
               <span class="speaking-card-meta">2026</span>
             </summary>
-            <div class="speaking-card-details">
+            <div class="speaking-card-details" id="speaking-card-4-details">
               <p class="speaking-card-title">CISCOM 2026 Keynote</p>
               <p class="speaking-card-meta-line"><strong>Event:</strong> CISCOM</p>
               <p class="speaking-card-meta-line"><strong>Year:</strong> 2026</p>
             </div>
           </details>
-          <details class="speaking-card" role="listitem">
-            <summary class="speaking-card-summary">
+          <details class="speaking-card" id="speaking-card-5" role="listitem">
+            <summary class="speaking-card-summary" aria-expanded="false" aria-controls="speaking-card-5-details">
               <span class="speaking-card-badge speaking-card-badge-keynote">Keynote</span>
               <span class="speaking-card-event">ICCIDC 2026</span>
               <span class="speaking-card-meta">2026</span>
             </summary>
-            <div class="speaking-card-details">
+            <div class="speaking-card-details" id="speaking-card-5-details">
               <p class="speaking-card-title">ICCIDC 2026 Keynote</p>
               <p class="speaking-card-meta-line"><strong>Event:</strong> ICCIDC</p>
               <p class="speaking-card-meta-line"><strong>Year:</strong> 2026</p>
@@ -363,11 +364,19 @@
         </div>
 
         <h3 class="recognition-subsection-title">Professional Service</h3>
-        <ul class="recognition-list">
-          <li>Judge — <a href="https://www.bintelligence.com/judge/siva-bayyavarapu" target="_blank" rel="noopener noreferrer">Business Intelligence Group</a></li>
-          <li>Reviewer &amp; Editorial Roles</li>
-          <li>Conference Reviewer</li>
-        </ul>
+        <div class="professional-service-groups">
+          <h4 class="service-group-title">Judging &amp; Evaluation</h4>
+          <ul class="recognition-list">
+            <li><a href="https://www.bintelligence.com/judge/siva-bayyavarapu" target="_blank" rel="noopener noreferrer">Business Intelligence Group Awards</a> — Judge</li>
+            <li>MakeOHI/O 2026 Hackathon — Judge</li>
+          </ul>
+          <h4 class="service-group-title">Peer Review</h4>
+          <ul class="recognition-list">
+            <li>IEEE conferences</li>
+            <li>Elsevier journals</li>
+            <li>Editorial / reviewer roles</li>
+          </ul>
+        </div>
 
         <h3 class="recognition-subsection-title">Leadership &amp; Community</h3>
         <ul class="recognition-list recognition-list-leadership">

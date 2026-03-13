@@ -669,6 +669,25 @@ html.dark .hero-mentorship-btn:hover {
   text-decoration: underline;
 }
 
+.professional-service-groups {
+  margin-top: 0.25rem;
+}
+
+.service-group-title {
+  margin: 1rem 0 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.professional-service-groups .service-group-title:first-child {
+  margin-top: 0;
+}
+
+.professional-service-groups .recognition-list {
+  margin-bottom: 0.75rem;
+}
+
 /* Speaking cards — only card-style block in recognition */
 .speaking-cards {
   display: grid;

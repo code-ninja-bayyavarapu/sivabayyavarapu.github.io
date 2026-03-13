@@ -37,6 +37,27 @@
     }
   }
 
+  function initSpeakingCards() {
+    var container = document.getElementById('speaking-cards-container');
+    if (!container) return;
+    var cards = container.querySelectorAll('.speaking-card');
+    cards.forEach(function (card) {
+      var summary = card.querySelector('.speaking-card-summary');
+      if (!summary) return;
+      summary.addEventListener('click', function (e) {
+        e.preventDefault();
+        var isOpen = card.getAttribute('open') !== null;
+        if (isOpen) {
+          card.removeAttribute('open');
+          summary.setAttribute('aria-expanded', 'false');
+        } else {
+          card.setAttribute('open', '');
+          summary.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  }
+
   var headerEl = document.getElementById('site-header');
   if (headerEl) {
     fetch(base + 'includes/header.html')
@@ -54,4 +75,5 @@
     initNav();
     initTheme();
   }
+  initSpeakingCards();
 })();
