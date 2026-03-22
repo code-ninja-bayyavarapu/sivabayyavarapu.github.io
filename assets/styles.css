@@ -773,6 +773,12 @@ html.dark .hero-mentorship-btn:hover {
   border: 1px solid var(--accent);
 }
 
+.speaking-card-badge-chair {
+  background: var(--surface-soft);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
 .speaking-card-event {
   font-weight: 600;
   color: var(--text);
