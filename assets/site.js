@@ -1,79 +1,78 @@
-/**
- * Shared header injector and site init (nav toggle, theme).
- * Load this script once per page; it fetches includes/header.html and inits UI.
- */
+/** Shared navigation, theme, and accessible disclosure state. */
 (function () {
-  var base = (window.location.pathname || '').indexOf('/blog') !== -1 ? '../' : '';
+  var base = (window.location.pathname || "").indexOf("/blog") !== -1 ? "../" : "";
 
   function initNav() {
-    var nav = document.querySelector('.main-nav');
-    var toggle = document.querySelector('.nav-toggle');
-    if (toggle && nav) {
-      toggle.addEventListener('click', function () {
-        var open = nav.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', open);
-      });
-      nav.querySelectorAll('a').forEach(function (a) {
-        a.addEventListener('click', function () {
-          nav.classList.remove('open');
-          toggle.setAttribute('aria-expanded', 'false');
-        });
-      });
-    }
-  }
+    var nav = document.querySelector(".main-nav");
+    var toggle = document.querySelector(".nav-toggle");
+    if (!toggle || !nav) return;
 
-  function initTheme() {
-    var themeBtn = document.querySelector('.theme-toggle');
-    if (themeBtn) {
-      var dark = localStorage.getItem('theme') === 'dark' ||
-        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
-      document.documentElement.classList.toggle('dark', dark);
-      themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
-      themeBtn.addEventListener('click', function () {
-        dark = !document.documentElement.classList.toggle('dark');
-        localStorage.setItem('theme', dark ? 'dark' : 'light');
-        themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
-      });
-    }
-  }
+    toggle.addEventListener("click", function () {
+      var open = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    });
 
-  function initSpeakingCards() {
-    var container = document.getElementById('speaking-cards-container');
-    if (!container) return;
-    var cards = container.querySelectorAll('.speaking-card');
-    cards.forEach(function (card) {
-      var summary = card.querySelector('.speaking-card-summary');
-      if (!summary) return;
-      summary.addEventListener('click', function (e) {
-        e.preventDefault();
-        var isOpen = card.getAttribute('open') !== null;
-        if (isOpen) {
-          card.removeAttribute('open');
-          summary.setAttribute('aria-expanded', 'false');
-        } else {
-          card.setAttribute('open', '');
-          summary.setAttribute('aria-expanded', 'true');
-        }
+    nav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        nav.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open menu");
       });
     });
   }
 
-  var headerEl = document.getElementById('site-header');
-  if (headerEl) {
-    fetch(base + 'includes/header.html')
-      .then(function (r) { return r.text(); })
+  function initTheme() {
+    var themeButton = document.querySelector(".theme-toggle");
+    if (!themeButton) return;
+
+    var savedTheme = localStorage.getItem("theme");
+    var isDark = savedTheme === "dark" || (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    document.documentElement.classList.toggle("dark", isDark);
+    themeButton.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+
+    themeButton.addEventListener("click", function () {
+      isDark = document.documentElement.classList.toggle("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+      themeButton.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+    });
+  }
+
+  function initDisclosures() {
+    document.querySelectorAll("details").forEach(function (details) {
+      var summary = details.querySelector("summary");
+      if (!summary) return;
+      summary.setAttribute("aria-expanded", String(details.open));
+      details.addEventListener("toggle", function () {
+        summary.setAttribute("aria-expanded", String(details.open));
+      });
+    });
+  }
+
+  function renderFallbackHeader(header) {
+    header.innerHTML = '<div class="wrap topbar-inner"><a class="brand brand-mark" href="' + (base || "./") + '">Siva Bayyavarapu</a><a class="text-link" href="' + (base || "./") + 'blog/">Writing</a></div>';
+  }
+
+  var header = document.getElementById("site-header");
+  if (header) {
+    fetch(base + "includes/header.html")
+      .then(function (response) {
+        if (!response.ok) throw new Error("Header unavailable");
+        return response.text();
+      })
       .then(function (html) {
-        headerEl.innerHTML = html;
+        header.innerHTML = html;
         initNav();
         initTheme();
       })
       .catch(function () {
-        headerEl.innerHTML = '<div class="wrap topbar-inner"><a class="brand" href="' + (base || './') + '">Siva Bayyavarapu</a><a href="' + (base || './') + 'blog/">Blog</a></div>';
+        renderFallbackHeader(header);
         initTheme();
       });
   } else {
     initNav();
     initTheme();
   }
-  initSpeakingCards();
+
+  initDisclosures();
 })();
