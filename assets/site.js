@@ -1,6 +1,7 @@
 /** Shared navigation, theme, and accessible disclosure state. */
 (function () {
-  var base = (window.location.pathname || "").indexOf("/blog") !== -1 ? "../" : "";
+  var path = window.location.pathname || "";
+  var base = path.indexOf("/blog/") !== -1 || path.indexOf("/research/") !== -1 ? "../" : "";
 
   function initNav() {
     var nav = document.querySelector(".main-nav");
