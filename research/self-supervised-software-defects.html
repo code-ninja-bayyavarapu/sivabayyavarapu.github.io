@@ -56,7 +56,7 @@
         </div>
         <section>
           <h2>Abstract</h2>
-          <p>This research presents a self-supervised method for identifying new software defects without labeled defect data. The framework combines source code, execution logs, and test results to capture syntactic, semantic, and behavioral signals, using a transformer-based encoder and contrastive objectives to learn defect-sensitive representations. By learning from relationships among software artifacts, the approach can generalize to previously unseen defects with limited human intervention. The work targets scalable defect discovery in continuously evolving software systems.</p>
+          <p>This research presents a self-supervised approach for automatically identifying new and previously unobserved software defects without labeled defect data. Contrastive self-supervised learning enables the model to learn useful representations by distinguishing normal and anomalous patterns across software artifacts. Source code, execution logs, and test results are combined to capture syntactic, semantic, and behavioral properties of software systems. The framework uses a transformer-based CodeBERT encoder and contrastive objectives to learn defect-sensitive representations from unlabeled data. By modeling relationships among software artifacts, the approach can generalize to bugs and zero-day defects that were not observed during training. Experimental analysis indicates that the framework can detect hidden and new defects with limited human intervention, reducing labeling costs and improving scalability for continuously evolving software development environments.</p>
         </section>
         <section class="citation-panel">
           <h2>Suggested citation</h2>

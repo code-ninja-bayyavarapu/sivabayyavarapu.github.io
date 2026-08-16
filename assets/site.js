@@ -50,6 +50,29 @@
     });
   }
 
+
+  function initCitationCopy() {
+    var actions = document.querySelector(".paper-actions");
+    var citation = document.querySelector(".citation-panel > p");
+    if (!actions || !citation || !navigator.clipboard) return;
+
+    var button = document.createElement("button");
+    button.className = "btn btn-secondary copy-citation";
+    button.type = "button";
+    button.textContent = "Copy citation";
+    actions.appendChild(button);
+
+    button.addEventListener("click", function () {
+      navigator.clipboard.writeText(citation.textContent.trim()).then(function () {
+        button.textContent = "Citation copied";
+        window.setTimeout(function () {
+          button.textContent = "Copy citation";
+        }, 1800);
+      }).catch(function () {
+        button.textContent = "Copy unavailable";
+      });
+    });
+  }
   function renderFallbackHeader(header) {
     header.innerHTML = '<div class="wrap topbar-inner"><a class="brand brand-mark" href="' + (base || "./") + '">Siva Bayyavarapu</a><a class="text-link" href="' + (base || "./") + 'blog/">Writing</a></div>';
   }
@@ -76,4 +99,5 @@
   }
 
   initDisclosures();
+  initCitationCopy();
 })();
