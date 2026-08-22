@@ -78,6 +78,7 @@
     var root = document.querySelector("[data-gallery]");
     if (!root) return;
 
+    var track = root.querySelector(".gallery-track");
     var slides = Array.prototype.slice.call(root.querySelectorAll(".gallery-slide"));
     var prev = root.querySelector(".gallery-prev");
     var next = root.querySelector(".gallery-next");
@@ -98,9 +99,7 @@
 
     function show(nextIndex) {
       index = (nextIndex + slides.length) % slides.length;
-      slides.forEach(function (slide, i) {
-        slide.classList.toggle("is-active", i === index);
-      });
+      track.style.transform = "translateX(-" + (index * 100) + "%)";
       dots.forEach(function (dot, i) {
         dot.classList.toggle("is-active", i === index);
       });
